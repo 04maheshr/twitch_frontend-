@@ -54,6 +54,7 @@ function Create() {
       const { roomCode } = await response.json();
       Socket.emit("joinRoom", roomCode);
       console.log("Generated Room Code:", roomCode);
+      localStorage.setItem('room_id',roomCode)
 
       const authToken = await hmsActions.getAuthTokenByRoomCode({ roomCode });
       await hmsActions.join({

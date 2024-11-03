@@ -55,7 +55,7 @@ const HomePage = () => {
         if (response.ok) {
           const data = await response.json();
           console.log('Stream Key:', data.data[0].stream_key);
-          localStorage.setItem('Stream Key:', data.data[0].stream_key);
+          localStorage.setItem('Stream_Key:', data.data[0].stream_key);
           setstreamKey(data.data[0].stream_key)// if we want we can set it in local storage da 
         } else {
           console.error('Error fetching stream key:', response.statusText);
