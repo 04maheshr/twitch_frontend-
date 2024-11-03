@@ -22,8 +22,11 @@ const Login = () => {
     };
   
     return (
-      <div>
-        <button onClick={handleLogin} className="active:to-black">
+      <div className="flex items-center justify-center min-h-screen bg-gray-900">
+        <button
+          onClick={handleLogin}
+          className="px-6 py-3 text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-800 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        >
           Login with Twitch
         </button>
       </div>
